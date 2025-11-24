@@ -11,7 +11,10 @@ const tokenDetails = [
 
 export default function TokenInfo() {
   return (
-    <section id="token-info" className="py-20 px-4 bg-black/50 backdrop-blur-sm">
+    <section
+      id="token-info"
+      className="py-20 px-4 bg-black/50 backdrop-blur-sm"
+    >
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -28,9 +31,7 @@ export default function TokenInfo() {
           >
             Token Information
           </motion.h2>
-          <p className="text-xl text-blue-200">
-            Learn about Yeti Sports token
-          </p>
+          <p className="text-xl text-blue-200">Learn about Yeti Sports token</p>
         </motion.div>
 
         <motion.div
@@ -39,7 +40,10 @@ export default function TokenInfo() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="bg-gradient-to-r from-yeti-blue/90 to-yeti-dark/90 backdrop-blur-md rounded-2xl p-8 border border-white/10 max-w-3xl mx-auto"
-          whileHover={{ scale: 1.02, boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)" }}
+          whileHover={{
+            scale: 1.02,
+            boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)",
+          }}
         >
           <h3 className="text-2xl font-bold text-white mb-6">Token Details</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white mb-6">
@@ -61,11 +65,14 @@ export default function TokenInfo() {
 
           <div className="mt-6 flex flex-wrap gap-4 justify-center">
             <motion.a
-              href="https://pump.fun"
+              href="https://pump.fun/coin/CGevbJ3ceVXjSCnSZJjjoK1Lpx5u1vrg3BYj8kRvpump"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-yeti-light text-white font-semibold rounded-lg relative overflow-hidden group"
-              whileHover={{ scale: 1.1, boxShadow: "0 10px 25px rgba(59, 130, 246, 0.5)" }}
+              whileHover={{
+                scale: 1.1,
+                boxShadow: "0 10px 25px rgba(59, 130, 246, 0.5)",
+              }}
               whileTap={{ scale: 0.95 }}
             >
               <span className="relative z-10">Trade on Pump.fun</span>
@@ -82,4 +89,3 @@ export default function TokenInfo() {
     </section>
   );
 }
-
