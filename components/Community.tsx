@@ -15,6 +15,12 @@ const socialLinks = [
     url: "https://t.me/yeti_tel",
     description: "Real-time chat",
   },
+  {
+    name: "Pump.fun",
+    icon: "🚀",
+    url: "https://pump.fun/coin/CGevbJ3ceVXjSCnSZJjjoK1Lpx5u1vrg3BYj8kRvpump",
+    description: "Trade and join community",
+  },
 ];
 
 export default function Community() {
@@ -36,7 +42,7 @@ export default function Community() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
           {socialLinks.map((link, index) => (
             <motion.a
               key={link.name}

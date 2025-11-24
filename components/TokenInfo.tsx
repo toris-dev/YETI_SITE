@@ -65,7 +65,7 @@ export default function TokenInfo() {
 
           <div className="mt-6 flex flex-wrap gap-4 justify-center">
             <motion.a
-              href="https://pump.fun/coin/CGevbJ3ceVXjSCnSZJjjoK1Lpx5u1vrg3BYj8kRvpump"
+              href="https://pump.fun/chat/8uuHe4s3NS"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-yeti-light text-white font-semibold rounded-lg relative overflow-hidden group"
