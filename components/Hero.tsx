@@ -29,7 +29,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden w-full max-w-full"
       onMouseMove={handleMouseMove}
     >
       {/* 배경 애니메이션 */}
@@ -59,9 +59,9 @@ export default function Hero() {
 
       {/* 메인 이미지 배경 */}
       <motion.div
-        className="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none"
+        className="absolute inset-0 flex items-center justify-center opacity-10 md:opacity-20 pointer-events-none w-full max-w-full overflow-hidden"
         initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 0.2, scale: 1 }}
+        animate={{ opacity: [0.1, 0.15, 0.1], scale: 1 }}
         transition={{ duration: 1.5 }}
       >
         <Image
@@ -69,12 +69,12 @@ export default function Hero() {
           alt="Yeti Coin"
           width={800}
           height={600}
-          className="max-w-4xl w-full h-auto object-contain"
+          className="max-w-full md:max-w-4xl w-full h-auto object-contain px-4"
           priority
         />
       </motion.div>
 
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center w-full max-w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ export default function Hero() {
         >
           {/* 로고 */}
           <motion.div
-            className="flex justify-center mb-6"
+            className="flex justify-center mb-4 md:mb-6"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -93,20 +93,20 @@ export default function Hero() {
               alt="Yeti Coin Logo"
               width={160}
               height={160}
-              className="w-32 h-32 md:w-40 md:h-40 drop-shadow-[0_0_20px_rgba(255,255,255,0.6)]"
+              className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 drop-shadow-[0_0_20px_rgba(255,255,255,0.6)]"
               priority
             />
           </motion.div>
 
           <motion.h1
-            className="text-7xl md:text-9xl font-bold mb-6 flex items-center justify-center gap-4"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-bold mb-4 md:mb-6 flex items-center justify-center gap-2 sm:gap-4 flex-wrap px-2"
             whileHover={{ scale: 1.05 }}
           >
-            <span className="text-7xl md:text-9xl drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+            <span className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] flex-shrink-0">
               ❄️
             </span>
             <motion.span
-              className="bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent"
+              className="bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent text-4xl sm:text-5xl md:text-7xl lg:text-9xl flex-shrink-0"
               animate={{
                 backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
               }}
@@ -123,7 +123,7 @@ export default function Hero() {
             >
               YETI
             </motion.span>
-            <span className="text-7xl md:text-9xl drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+            <span className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] flex-shrink-0">
               ❄️
             </span>
           </motion.h1>
@@ -132,7 +132,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-2xl md:text-4xl text-white mb-8 font-semibold"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white mb-4 md:mb-8 font-semibold px-2"
             whileHover={{
               scale: 1.1,
               rotate: [0, -2, 2, -2, 0],
@@ -146,11 +146,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-blue-200 mb-12 max-w-2xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-blue-200 mb-8 md:mb-12 max-w-2xl mx-auto px-2"
             whileHover={{ scale: 1.05 }}
           >
             Relive the classic Yeti Sports game as a meme coin!
-            <br />
+            <br className="hidden sm:block" />
+            <span className="sm:hidden"> </span>
             Available on Pump.fun
           </motion.p>
 
@@ -158,13 +159,13 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center relative z-20"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center relative z-20 px-2"
           >
             <motion.a
               href="https://pump.fun/coin/CGevbJ3ceVXjSCnSZJjjoK1Lpx5u1vrg3BYj8kRvpump"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-gradient-to-r from-yeti-light to-yeti-blue text-white font-bold text-xl rounded-full shadow-2xl relative overflow-hidden group"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-yeti-light to-yeti-blue text-white font-bold text-base sm:text-lg md:text-xl rounded-full shadow-2xl relative overflow-hidden group text-center"
               whileHover={{
                 scale: 1.1,
                 boxShadow: "0 0 30px rgba(59, 130, 246, 0.6)",
@@ -182,7 +183,7 @@ export default function Hero() {
 
             <motion.a
               href="#token-info"
-              className="px-8 py-4 bg-white/10 backdrop-blur-md text-white font-bold text-xl rounded-full border-2 border-white/20 relative overflow-hidden group"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-md text-white font-bold text-base sm:text-lg md:text-xl rounded-full border-2 border-white/20 relative overflow-hidden group text-center"
               whileHover={{
                 scale: 1.1,
                 borderColor: "rgba(255, 255, 255, 0.5)",
@@ -202,7 +203,7 @@ export default function Hero() {
 
         {/* 펭귄 애니메이션 */}
         <motion.div
-          className="absolute bottom-10 right-10 md:right-20 cursor-pointer z-0"
+          className="absolute bottom-4 sm:bottom-10 right-4 sm:right-10 md:right-20 cursor-pointer z-0"
           animate={{
             y: [0, -20, 0],
             rotate: [0, 5, -5, 0],
@@ -226,7 +227,7 @@ export default function Hero() {
           }}
           whileTap={{ scale: 1.2 }}
         >
-          <span className="text-6xl block drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
+          <span className="text-4xl sm:text-5xl md:text-6xl block drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
             🐧
           </span>
         </motion.div>
