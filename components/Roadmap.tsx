@@ -99,14 +99,21 @@ export default function Roadmap() {
                       : "md:ml-auto md:pl-8"
                   }`}
                 >
-                  <div
+                  <motion.div
                     className={`bg-gradient-to-br from-yeti-blue/80 to-yeti-dark/80 backdrop-blur-md rounded-2xl p-6 border-2 ${
                       item.status === "completed"
                         ? "border-green-400"
                         : item.status === "in-progress"
                         ? "border-yeti-light"
                         : "border-white/20"
-                    } hover:scale-105 transition-transform`}
+                    }`}
+                    whileHover={{
+                      scale: 1.05,
+                      rotate: [0, 1, -1, 0],
+                      boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)",
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                    transition={{ duration: 0.3 }}
                   >
                     <div className="flex items-center justify-between mb-4">
                       <span
@@ -136,16 +143,31 @@ export default function Roadmap() {
 
                     <ul className="space-y-2">
                       {item.items.map((listItem, itemIndex) => (
-                        <li
+                        <motion.li
                           key={itemIndex}
                           className="flex items-start text-white/80"
+                          initial={{ opacity: 0, x: -10 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.3, delay: itemIndex * 0.1 }}
+                          whileHover={{ x: 5, color: "white" }}
                         >
-                          <span className="mr-2">•</span>
+                          <motion.span
+                            className="mr-2"
+                            animate={{ rotate: [0, 10, -10, 0] }}
+                            transition={{
+                              duration: 2,
+                              repeat: Infinity,
+                              delay: itemIndex * 0.2,
+                            }}
+                          >
+                            •
+                          </motion.span>
                           <span>{listItem}</span>
-                        </li>
+                        </motion.li>
                       ))}
                     </ul>
-                  </div>
+                  </motion.div>
                 </div>
               </motion.div>
             ))}

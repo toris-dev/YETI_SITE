@@ -77,18 +77,26 @@ export default function Community() {
             and have fun together! 🎉
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <span className="px-4 py-2 bg-white/10 rounded-full text-white">
-              #YetiSports
-            </span>
-            <span className="px-4 py-2 bg-white/10 rounded-full text-white">
-              #MemeCoin
-            </span>
-            <span className="px-4 py-2 bg-white/10 rounded-full text-white">
-              #Solana
-            </span>
-            <span className="px-4 py-2 bg-white/10 rounded-full text-white">
-              #PumpFun
-            </span>
+            {["#YetiSports", "#MemeCoin", "#Solana", "#PumpFun"].map(
+              (tag, index) => (
+                <motion.span
+                  key={tag}
+                  className="px-4 py-2 bg-white/10 rounded-full text-white cursor-pointer"
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  whileHover={{
+                    scale: 1.2,
+                    backgroundColor: "rgba(255, 255, 255, 0.2)",
+                    rotate: [0, -5, 5, -5, 0],
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  {tag}
+                </motion.span>
+              )
+            )}
           </div>
         </motion.div>
       </div>
