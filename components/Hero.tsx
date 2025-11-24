@@ -161,7 +161,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center relative z-20"
           >
             <motion.a
-              href="https://pump.fun"
+              href="https://pump.fun/coin/CGevbJ3ceVXjSCnSZJjjoK1Lpx5u1vrg3BYj8kRvpump"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gradient-to-r from-yeti-light to-yeti-blue text-white font-bold text-xl rounded-full shadow-2xl relative overflow-hidden group"
