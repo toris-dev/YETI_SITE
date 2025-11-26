@@ -1,6 +1,6 @@
-# 🏔️ Yeti Sports Meme Coin
+# 🏔️ YETI Meme Coin
 
-Official website for Yeti Sports meme coin. A Solana-based meme coin project launched on Pump.fun.
+Official website for YETI meme coin. A Solana-based meme coin project launched on Pump.fun.
 
 ## 🚀 Getting Started
 
@@ -47,7 +47,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view it.
 
 ### Phase 4: Ecosystem Expansion 📅
 
-- [ ] Yeti Sports game remake project
+- [ ] YETI game remake project
 - [ ] NFT collection launch review
 - [ ] In-game token utility
 - [ ] Long-term ecosystem building

@@ -32,7 +32,7 @@ export default function Footer() {
             whileHover={{ scale: 1.1, rotate: [0, -2, 2, 0] }}
             transition={{ duration: 0.3 }}
           >
-            ❄️ Yeti Sports ❄️
+            ❄️ YETI ❄️
           </motion.h3>
           <motion.p
             className="text-sm sm:text-base text-blue-200 px-2"
@@ -58,7 +58,7 @@ export default function Footer() {
             className="text-white/40 text-xs mt-3 sm:mt-4"
             whileHover={{ scale: 1.05 }}
           >
-            © 2025 Yeti Sports. All rights reserved.
+            © 2025 YETI. All rights reserved.
           </motion.p>
         </motion.div>
       </div>

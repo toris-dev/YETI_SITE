@@ -38,7 +38,7 @@ export default function Community() {
             Community 👥
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-blue-200 mb-6 sm:mb-8 px-2">
-            Join the Yeti Sports community!
+            Join the YETI community!
           </p>
         </motion.div>
 
@@ -62,7 +62,9 @@ export default function Community() {
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 sm:mb-2">
                 {link.name}
               </h3>
-              <p className="text-blue-200 text-xs sm:text-sm">{link.description}</p>
+              <p className="text-blue-200 text-xs sm:text-sm">
+                {link.description}
+              </p>
             </motion.a>
           ))}
         </div>
@@ -78,9 +80,9 @@ export default function Community() {
             Growing Together
           </h3>
           <p className="text-blue-200 text-sm sm:text-base md:text-lg mb-4 sm:mb-6 max-w-2xl mx-auto px-2">
-            Yeti Sports is a community-driven project. Your participation and
-            support drive the project&apos;s growth. Create memes, share them,
-            and have fun together! 🎉
+            YETI is a community-driven project. Your participation and support
+            drive the project&apos;s growth. Create memes, share them, and have
+            fun together! 🎉
           </p>
           <div className="flex flex-wrap justify-center gap-2 sm:gap-4 px-2">
             {["#YetiSports", "#MemeCoin", "#Solana", "#PumpFun"].map(

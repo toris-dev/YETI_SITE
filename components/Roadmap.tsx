@@ -42,10 +42,10 @@ const roadmapItems = [
   {
     phase: "Phase 4",
     title: "Ecosystem Expansion",
-    description: "Yeti Sports game and NFT project integration",
+    description: "YETI game and NFT project integration",
     status: "planned",
     items: [
-      "Yeti Sports game remake project",
+      "YETI game remake project",
       "NFT collection launch review",
       "In-game token utility",
       "Long-term ecosystem building",
@@ -68,7 +68,7 @@ export default function Roadmap() {
             Roadmap 🗺️
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-blue-200 px-2">
-            Check out Yeti Sports&apos; future plans
+            Check out YETI&apos; future plans
           </p>
         </motion.div>
 

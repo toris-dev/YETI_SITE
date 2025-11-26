@@ -149,7 +149,7 @@ export default function Hero() {
             className="text-base sm:text-lg md:text-xl text-blue-200 mb-8 md:mb-12 max-w-2xl mx-auto px-2"
             whileHover={{ scale: 1.05 }}
           >
-            Relive the classic Yeti Sports game as a meme coin!
+            Relive the classic YETI game as a meme coin!
             <br className="hidden sm:block" />
             <span className="sm:hidden"> </span>
             Available on Pump.fun
